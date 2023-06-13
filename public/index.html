@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Secretaria de ciencia y tecnologia</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Spinner -->
+    <link rel="stylesheet" href="css/spinner.css" />
+  </head>
+  <body>
+    <!-- Main container of application -->
+    <div class="container">
+      <section class="showcase">
+        <form id="image-form">
+          <img src="./image/logo_secretaria.png" class="logo_secretaria" />
+          <header>Generador de imagenes</header>
+
+          <div class="form-control">
+            <input
+              type="text"
+              id="prompt"
+              placeholder="Ej: Un gato en la luna con sombrero.."
+              autocomplete="off"
+            />
+            <button type="submit" class="btn">Generar</button>
+          </div>
+        </form>
+      </section>
+      <!-- container for api result -->
+      <section class="image">
+        <div class="image-container">
+          <h2 class="msg"></h2>
+          <img src="" id="image" />
+        </div>
+      </section>
+    </div>
+
+    <div class="spinner"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
