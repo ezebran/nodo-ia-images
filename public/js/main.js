@@ -29,9 +29,11 @@ const generateImageRequest = async (prompt) => {
 
     if (!response.ok) {
       removeSpinner();
+      const resp = await response.json();
+      console.log("respuesta: ", resp.mensaje)
       throw new Error("Ocurrio un error y la imagen no se pudo generar correctamente");
     }
-
+    // console.log("respuesta: ")
     const data = await response.json();
     const imgUrl = data.data;
 
@@ -39,6 +41,7 @@ const generateImageRequest = async (prompt) => {
     removeSpinner();
   } catch (error) {
     document.querySelector(".msg").textContent = error;
+    
   }
 };
 
